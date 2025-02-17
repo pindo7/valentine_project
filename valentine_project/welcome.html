@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine's Invitation</title>
+    <link rel="stylesheet" href="styles/welcome.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="heart" style="top: 10%; left: 15%">❤️</div>
+      <div class="heart" style="top: 25%; left: 50%">❤️</div>
+      <div class="heart" style="top: 50%; left: 20%">❤️</div>
+      <div class="heart" style="top: 60%; left: 70%">❤️</div>
+      <div class="heart" style="top: 80%; left: 40%">❤️</div>
+      <div class="heart" style="top: 15%; left: 80%">❤️</div>
+      <div class="heart" style="top: 5%; left: 30%">❤️</div>
+      <div class="heart" style="top: 40%; left: 10%">❤️</div>
+      <div class="heart" style="top: 75%; left: 85%">❤️</div>
+      <div class="heart" style="top: 90%; left: 60%">❤️</div>
+      <div class="heart" style="top: 35%; left: 75%">❤️</div>
+      <div class="heart" style="top: 50%; left: 90%">❤️</div>
+      <div class="heart" style="top: 88%; left: 5%">❤️</div>
+
+      <!-- Main card -->
+      <div class="card">
+        <div class="card-inner">
+          <!-- Back of the Card -->
+          <div class="card-back">
+            <h2>💖</h2>
+          </div>
+
+          <!-- Front of the Card -->
+          <div class="card-front">
+            <h1>💖 A Special Valentine's Invitation 💖</h1>
+            <button onclick="showPopUp()">View 👓</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+        <h2>Attention! 💖</h2>
+        <p>
+          This invitation is only for the right person! Let's verify in the next
+          quiz whether you're the special one. 💘
+        </p>
+        <img src="valentine.gif" alt="Valentine GIF" class="popup-gif" />
+        <button onclick="goToQuiz()">Continue</button>
+      </div>
+    </div>
+
+    <script src="scripts/welcome.js"></script>
+  </body>
+</html>

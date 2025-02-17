@@ -1,0 +1,174 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  overflow: hidden;
+}
+
+.background {
+  background-color: #f0bfbf;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Hearts scattered randomly */
+.heart {
+  position: absolute;
+  font-size: 30px;
+  color: #ff4d4d;
+  opacity: 0.4;
+}
+
+/* Card container with 3D effect */
+.card {
+  width: 700px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+/* Rotate when hovered */
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Back of the card */
+.card-back {
+  background-color: #ff6666;
+  color: white;
+}
+
+/* Front of the card */
+.card-front {
+  background-color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #ff4d4d;
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+button {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff6666;
+}
+
+/* Popup container (initially hidden) */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Make sure it’s above other elements */
+}
+
+/* Popup content */
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+}
+
+.popup-content h2 {
+  color: #ff4d4d;
+  margin-bottom: 15px;
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Continue button */
+.popup-content button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  display: block; /* Make sure the button is on a new line */
+  margin: 15px auto; /* Center the button and add space */
+}
+
+.popup-content button:hover {
+  background-color: #ff6666;
+}
+
+/* Blur background when popup is active */
+.blur {
+  filter: blur(5px);
+}
+
+/* Hide the popup initially */
+.hidden {
+  display: none;
+}
+
+.popup-gif {
+  width: 250px; /* Resize as needed */
+  height: auto;
+  display: block; /* Forces GIF to take full width and move button below */
+  margin: 15px auto; /* Centers the GIF and adds space */
+  border-radius: 10px;
+}

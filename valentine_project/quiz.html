@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine's Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css" />
+  </head>
+  <body>
+    <h1>Welcome to the Valentine's Quiz! 💖</h1>
+    <p>Let's see if you're the special one! 💝💝💖💖</p>
+
+    <form id="quizForm">
+      <!-- Question 1 -->
+      <div class="question">
+        <h3>1. How amazing is your special someone? 💝</h3>
+        <label><input type="radio" name="q1" value="a" /> Very much 😊</label
+        ><br />
+        <label><input type="radio" name="q1" value="b" /> Too much! 💖</label
+        ><br />
+        <label
+          ><input type="radio" name="q1" value="c" /> Infinitely amazing
+          😍💕🤞</label
+        ><br />
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">
+        <h3>2. Can life be imagined without them? 💕</h3>
+        <label><input type="radio" name="q2" value="a" /> Maybe 😫😪</label
+        ><br />
+        <label
+          ><input type="radio" name="q2" value="b" /> Definitely not!
+          😅🤗😚</label
+        ><br />
+        <label
+          ><input type="radio" name="q2" value="c" /> Life wouldn't be the same
+          💝💖</label
+        ><br />
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">
+        <h3>3. Who is the favorite one? 🧐🤭</h3>
+        <label><input type="checkbox" name="q3" value="a" /> Option A 😻</label
+        ><br />
+        <label
+          ><input type="checkbox" name="q3" value="b" /> Option B 🐱‍🐉</label
+        ><br />
+        <label
+          ><input type="checkbox" name="q3" value="c" /> No favorite 😪</label
+        ><br />
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">
+        <h3>4. What does the ideal home look like?</h3>
+        <label><input type="radio" name="q4" value="a" /> A cozy place 🥺</label
+        ><br />
+        <label
+          ><input type="radio" name="q4" value="b" /> With someone special
+          😊😉</label
+        ><br />
+        <label><input type="radio" name="q4" value="c" /> Alone 😣</label><br />
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question">
+        <h3>5. What’s the favorite drink?</h3>
+        <label><input type="radio" name="q5" value="a" /> Water 🧊</label><br />
+        <label><input type="radio" name="q5" value="b" /> Sprite 🧃</label
+        ><br />
+        <label><input type="radio" name="q5" value="c" /> Iced tea 🍑</label
+        ><br />
+      </div>
+
+      <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+    </form>
+
+    <!-- Congratulations Popup -->
+    <div id="congratsPopup" class="popup hidden">
+      <div class="popup-content">
+        <h2>Congratulations! 🎉</h2>
+        <p>You've passed! Unlocking your invitation 💖</p>
+        <img src="congrats.gif" alt="Congratulations GIF" class="popup-gif" />
+        <button onclick="goToYes_No()">Continue</button>
+      </div>
+    </div>
+
+    <!-- Wrong Answers Popup -->
+    <div id="wrongPopup" class="popup hidden">
+      <div class="popup-content">
+        <h2>Oops! ❌</h2>
+        <p>Something’s not right! Try again to unlock your invitation 💖</p>
+        <img src="bad_quiz.gif" alt="Wrong Answer GIF" class="popup-gif" />
+        <button onclick="closeWrongPopup()">Try Again</button>
+      </div>
+    </div>
+
+    <script src="scripts/quiz.js"></script>
+  </body>
+</html>

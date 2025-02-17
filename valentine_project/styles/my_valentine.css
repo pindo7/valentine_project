@@ -1,0 +1,110 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: #ffe6e6;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  background-color: white;
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 500px;
+  position: relative;
+  z-index: 2;
+}
+
+.question {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #ff4d4d;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.5em;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Yes button styles */
+.yes {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.yes:hover {
+  background-color: #ff6666;
+  transform: scale(1.1);
+}
+
+/* No button styles */
+.no {
+  background-color: #cccccc;
+  color: black;
+  position: relative;
+  transition: 0.1s ease;
+}
+
+.no:hover {
+  background-color: #d9d9d9;
+  transform: scale(1.1) rotate(-10deg);
+}
+
+.hidden {
+  display: none;
+}
+
+/* GIF styles */
+.gif {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.left-gif {
+  width: 250px; /* Resize as needed */
+  height: auto;
+  display: block; /* Forces GIF to take full width and move button below */
+  margin: 15px auto; /* Centers the GIF and adds space */
+  border-radius: 10px;
+  left: 170px;
+}
+
+.right-gif {
+  width: 250px; /* Resize as needed */
+  height: auto;
+  display: block; /* Forces GIF to take full width and move button below */
+  margin: 15px auto; /* Centers the GIF and adds space */
+  border-radius: 10px;
+  right: 170px;
+}

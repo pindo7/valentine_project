@@ -1,0 +1,183 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: #ffe6e6;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  color: #ff4d4d;
+  font-size: 2.5em;
+}
+
+p {
+  color: #333;
+  font-size: 1.2em;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.1em;
+}
+
+button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff6666;
+}
+
+.hidden {
+  display: none;
+}
+
+#quizResult {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* Style for custom checkboxes to look like radio buttons */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Custom circle to replace checkbox */
+.custom-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff4d4d;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  background-color: white;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Dot inside when checked */
+.custom-circle::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #ff4d4d;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Show the dot when checked */
+.custom-checkbox input[type="checkbox"]:checked + .custom-circle::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Change circle color when checked */
+.custom-checkbox input[type="checkbox"]:checked + .custom-circle {
+  border-color: #ff6666;
+  background-color: #ffe6e6;
+}
+
+/* Popup container (initially hidden) */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it’s above other content */
+}
+
+/* Popup content */
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.popup-content h2 {
+  color: #ff4d4d;
+  margin-bottom: 15px;
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.popup-content button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+  background-color: #ff6666;
+}
+
+/* GIF styling */
+.popup-gif {
+  width: 150px;
+  margin: 15px auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Hide the popup initially */
+.hidden {
+  display: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
